@@ -1,0 +1,37 @@
+.searchItems {
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.searchItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    flex: 1;
+}
+
+.searchItem > img {
+    background-color: gray;
+}
+
+.searchItem > div {
+    text-align: center;
+}
+
+.paginator {
+    margin: 5px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.paginator > span {
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+.pageActive {
+    font-weight: bold;
+}

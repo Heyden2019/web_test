@@ -12,7 +12,7 @@ const Header = (props) => {
     return (<>
             <div className={styles.container}>
                 <div className={styles.logo}>Movie Catalog</div>
-                <SearchBox onSubmit={getMovies}/>
+                <SearchBox onSubmit={getMovies} onChange={getMovies}/>
                 <Login/>
             </div>
 

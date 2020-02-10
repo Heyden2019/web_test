@@ -1,3 +1,4 @@
+import {moviesAPI} from "../api/api";
 
 const CHANGE_SEARCH_BOX = 'CHANGE_SEARCH_BOX';
 const SET_MOVIES = 'SET_MOVIES';
@@ -54,11 +55,43 @@ const SearchInfoReducer = (state = initialState, action) => {
     }
 }
 
-export const changeSearchBoxAC = (value) => ({type: CHANGE_SEARCH_BOX, value});
-export const setMoviesAC = (data) => ({type: SET_MOVIES, data});
-export const setCurrentPageAC = (page) => ({type: SET_CURRENT_PAGE, page});
-export const setIsFetchingAC = (value) => ({type: SET_IS_FETCHING, value});
-export const setErrorAC = (error) => ({type: ERROR, error});
+export const changeSearchBox = (value) => ({type: CHANGE_SEARCH_BOX, value});
+export const setMovies = (data) => ({type: SET_MOVIES, data});
+export const setCurrentPage = (page) => ({type: SET_CURRENT_PAGE, page});
+export const setIsFetching = (value) => ({type: SET_IS_FETCHING, value});
+export const setError = (error) => ({type: ERROR, error});
 
+
+export const getMovies = (SearchMovie) => {
+    return (dispatch) => {
+        dispatch(changeSearchBox(SearchMovie));
+        if (!SearchMovie) {
+            return undefined;
+        }
+        dispatch(setIsFetching(true));
+        dispatch(setCurrentPage(1));
+        moviesAPI.getMovies(SearchMovie, 1)
+            .then(data => {
+                dispatch(setMovies(data));
+                dispatch(setIsFetching(false));
+            })
+            .catch(reason => {
+                dispatch(setError(reason));
+                dispatch(setIsFetching(false));
+            })
+    }
+}
+
+export const changePage = (searchText, Page) => {
+    return (dispatch) => {
+        dispatch(setCurrentPage(Page));
+        dispatch(setIsFetching(true));
+        moviesAPI.getMovies(searchText, Page)
+            .then(data => {
+                dispatch(setMovies(data));
+                dispatch(setIsFetching(false));
+            })
+    }
+}
 
 export default SearchInfoReducer;

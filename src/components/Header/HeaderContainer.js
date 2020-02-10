@@ -1,7 +1,7 @@
 import Header from "./Header";
 import {connect} from "react-redux";
-import {changeSearchBoxAC, setCurrentPageAC, setIsFetchingAC} from "./../../redux/searchInfo-reducer";
-import {setErrorAC, setMoviesAC} from "../../redux/searchInfo-reducer";
+import {changeSearchBox, setCurrentPage, setIsFetching} from "./../../redux/searchInfo-reducer";
+import {setError, getMovies} from "../../redux/searchInfo-reducer";
 
 
 const mapStateToProps = (state) => {
@@ -12,30 +12,8 @@ const mapStateToProps = (state) => {
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        changeSearchBox: (value) => {
-            dispatch(changeSearchBoxAC(value));
-        },
-
-        setMovies: (value) => {
-            dispatch(setMoviesAC(value));
-        },
-
-        setCurrentPage: (page) => {
-            dispatch(setCurrentPageAC(page));
-        },
-
-        setIsFetching: (value) => {
-            dispatch(setIsFetchingAC(value));
-        },
-
-        setError: (error) => {
-            dispatch(setErrorAC(error));
-        }
-    }
-}
-
-const HeaderContainer = connect(mapStateToProps, mapDispatchToProps)(Header);
+const HeaderContainer = connect(mapStateToProps, {
+    changeSearchBox, setCurrentPage, setIsFetching, setError, getMovies
+})(Header);
 
 export default HeaderContainer;

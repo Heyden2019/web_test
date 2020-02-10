@@ -1,6 +1,6 @@
 import Content from "./Content";
 import {connect} from "react-redux";
-import {setCurrentPageAC, setErrorAC, setIsFetchingAC, setMoviesAC} from "../../redux/searchInfo-reducer";
+import {setError, setIsFetching, getMovies, changePage} from "../../redux/searchInfo-reducer";
 
 const mapStateToProps = (state) => {
     return {
@@ -13,28 +13,8 @@ const mapStateToProps = (state) => {
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        setCurrentPage: (page) => {
-            dispatch(setCurrentPageAC(page));
-        },
-
-        setMovies: (value) => {
-            dispatch(setMoviesAC(value));
-        },
-
-        setIsFetching: (value) => {
-            dispatch(setIsFetchingAC(value));
-        },
-
-        setError: (error) => {
-            dispatch(setErrorAC(error));
-        }
-    }
-}
-
-
-
-const ContentContainer = connect(mapStateToProps, mapDispatchToProps)(Content);
+const ContentContainer = connect(mapStateToProps, {
+    setError, setIsFetching, getMovies, changePage
+})(Content);
 
 export default ContentContainer;

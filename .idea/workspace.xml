@@ -2,7 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7dd78911-4d47-4154-b227-9c5299533344" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Content/Content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Content.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Content/ContentContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/ContentContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/HeaderContainer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Login/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/SearchBox/SearchBox.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/SearchBox/SearchBox.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/SearchBox/SearchBoxContainer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/Store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/searchInfo-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/searchInfo-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/paginator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/paginator.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,12 +39,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../react-way-of-samurai" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="E:\ptn\web_test\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -68,6 +85,8 @@
       <workItem from="1581965197231" duration="48000" />
       <workItem from="1582625037088" duration="127000" />
       <workItem from="1596054809247" duration="1240000" />
+      <workItem from="1596131691879" duration="95000" />
+      <workItem from="1597674657794" duration="10656000" />
     </task>
     <servers />
   </component>
@@ -88,28 +107,29 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="580" y="183" key="FileChooserDialogImpl" timestamp="1596055228420">
+    <state x="580" y="183" key="FileChooserDialogImpl" timestamp="1597674820003">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="580" y="183" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1596055228420" />
+    <state x="580" y="183" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1597674820003" />
     <state x="680" y="139" key="RollbackChangesDialog" timestamp="1596055314576">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="680" y="139" key="RollbackChangesDialog/0.0.1600.860@0.0.1600.860" timestamp="1596055314576" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/App.js</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/App.js</url>
-          <line>1</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state width="498" height="446" key="SwitcherDM" timestamp="1597683874426">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1600.860@0.0.1600.860" timestamp="1597683874426" />
+    <state x="497" y="28" width="606" height="804" key="find.popup" timestamp="1597683908569">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="497" y="28" width="606" height="804" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1597683908569" />
+    <state x="456" y="190" key="run.anything.popup" timestamp="1597682214493">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="456" y="190" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1597682214493" />
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1597684024009">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1597684024009" />
   </component>
 </project>

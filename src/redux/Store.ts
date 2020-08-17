@@ -8,8 +8,12 @@ let reducers = combineReducers({
     form: formReducer
 });
 
+type RootReducerType = typeof reducers; // (globalstate: AppStateType) => AppStateType
+export type AppStateType = ReturnType<RootReducerType>
+
 let store = createStore(reducers, applyMiddleware(thunkMiddleware));
 
-window.store = store;
+// @ts-ignore
+window.__store__ = store;
 
 export default store;

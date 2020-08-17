@@ -1,12 +1,11 @@
 import React from 'react';
 import './App.css';
 import ContentContainer from "./components/Content/ContentContainer";
-import HeaderContainer from "./components/Header/HeaderContainer";
+import Header from "./components/Header/Header";
 
-
-function App() {
+const App = () => {
   return (<>
-        <HeaderContainer />
+        <Header />
         <ContentContainer />
     </>
   );

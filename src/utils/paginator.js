@@ -1,27 +1,18 @@
 
 export const paginator = (totalResults, currentPage) => {
-    let Totalpages = totalResults / 10;
-    if (Totalpages !== parseInt(Totalpages)) {
-        Totalpages = parseInt(Totalpages) + 1;
-    }
-
+    const totalPages = Math.ceil(totalResults / 10);
     let Pages = [];
-    if (Totalpages > 10) {
+    if (totalPages > 10) {
         for (let i = currentPage - 3; i <= currentPage + 3; i++) {
-            if (i < 2) {
-                continue;
-            } else if (i > Totalpages - 1) {
-                continue;
-            } else {
+            if (i >= 2 && (i <= totalPages - 1)) {
                 Pages.push(i);
             }
         }
-        Pages = [1, ...Pages, parseInt(Totalpages)];
+        Pages = [1, ...Pages, totalPages];
     } else {
-        for (let i = 0; i < Totalpages; i++) {
+        for (let i = 0; i < totalPages; i++) {
             Pages.push(i + 1);
         }
     }
-
     return Pages;
 }

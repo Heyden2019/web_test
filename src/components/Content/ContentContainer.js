@@ -1,6 +1,6 @@
 import Content from "./Content";
 import {connect} from "react-redux";
-import {setError, setIsFetching, getMovies, changePage} from "../../redux/searchInfo-reducer";
+import {setError, changePage} from "../../redux/searchInfo-reducer";
 
 const mapStateToProps = (state) => {
     return {
@@ -14,7 +14,7 @@ const mapStateToProps = (state) => {
 }
 
 const ContentContainer = connect(mapStateToProps, {
-    setError, setIsFetching, getMovies, changePage
+    setError, changePage
 })(Content);
 
 export default ContentContainer;

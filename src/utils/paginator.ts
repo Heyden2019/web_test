@@ -1,5 +1,5 @@
 
-export const paginator = (totalResults, currentPage) => {
+export const paginator = (totalResults: number, currentPage: number) => {
     const totalPages = Math.ceil(totalResults / 10);
     let Pages = [];
     if (totalPages > 10) {

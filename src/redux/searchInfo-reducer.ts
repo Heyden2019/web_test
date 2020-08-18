@@ -2,6 +2,7 @@ import {moviesAPI} from "../api/api";
 import {Dispatch} from "redux";
 import {ThunkAction} from "redux-thunk";
 import {AppStateType} from "./Store";
+import {DataType, MovieType} from "../types/types";
 
 const CHANGE_SEARCH_BOX = 'CHANGE_SEARCH_BOX';
 const SET_MOVIES = 'SET_MOVIES';
@@ -11,21 +12,13 @@ const ERROR = 'ERROR';
 
 type ActionsTypes = ChangeSearchBoxType | SetMoviesType | SetCurrentPageType | SetIsFetchingType | SetErrorType
 
-type MovieType = {
-    Poster: number,
-    Title: string,
-    Year: number,
-    imdbID: string,
-    Type: string
-}
-
 type initialStateType = {
-    movies: Array<MovieType> | null,
-    searchBox: string | null,
+    movies: Array<MovieType>,
+    searchBox: string,
     isFetching: boolean,
-    totalResults: number | null,
-    currentPage: number | null,
-    Error: string | null
+    totalResults: number,
+    currentPage: number,
+    Error: string
 }
 
 let initialState: initialStateType = {
@@ -34,7 +27,7 @@ let initialState: initialStateType = {
     ],
     searchBox: "",
     isFetching: false,
-    totalResults: null,
+    totalResults: 0,
     currentPage: 1,
     Error: "Hello, try to find the movie"
 };
@@ -79,10 +72,6 @@ type ChangeSearchBoxType = {
 }
 export const changeSearchBox = (value: string): ChangeSearchBoxType => ({type: CHANGE_SEARCH_BOX, value});
 
-type DataType = {
-    movies: Array<MovieType>,
-    totalResults: number
-}
 type SetMoviesType = {
     type: typeof SET_MOVIES,
     data: DataType
@@ -101,14 +90,14 @@ type SetIsFetchingType = {
 }
 export const setIsFetching = (value: boolean): SetIsFetchingType => ({type: SET_IS_FETCHING, value});
 
-type SetErrorType = {
+export type SetErrorType = {
     type: typeof ERROR,
     error: string
 }
 export const setError = (error: string): SetErrorType => ({type: ERROR, error});
 
 type DispatchType = Dispatch<ActionsTypes>
-type ThunkType = ThunkAction<Promise<void>, AppStateType, unknown, ActionsTypes>
+export type ThunkType = ThunkAction<Promise<void>, AppStateType, unknown, ActionsTypes>
 export const getMovies = (SearchMovie: string): ThunkType => {
     return async (dispatch: DispatchType) => {
         dispatch(changeSearchBox(SearchMovie));

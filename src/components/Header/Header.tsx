@@ -9,7 +9,13 @@ type PropsType = {
     getMovies: (value: string) => void
 }
 
-const Header: FC<PropsType>= ({getMovies}) => {
+type SearchMovieType = string | null
+
+type FormValueType = {
+    value: SearchMovieType
+}
+
+const Header: FC<PropsType> = ({getMovies}) => {
 
     let getMoviesFromSearchBox = (value: any) => {
         if (value.SearchMovie) {

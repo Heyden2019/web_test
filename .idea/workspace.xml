@@ -2,23 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7dd78911-4d47-4154-b227-9c5299533344" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content/Content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Content.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content/ContentContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/ContentContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/HeaderContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Login/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/SearchBox/SearchBox.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/SearchBox/SearchBox.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/SearchBox/SearchBoxContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/Store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/searchInfo-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/searchInfo-reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/paginator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/paginator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Content/Content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Content.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Content/ContentContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/ContentContainer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Login/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/SearchBox/SearchBox.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/SearchBox/SearchBox.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Preloader/Preloader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Preloader/Preloader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/searchInfo-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/searchInfo-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/paginator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/paginator.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,8 +36,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../react-way-of-samurai" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="E:\ptn\web_test\node_modules\typescript\lib" />
@@ -86,7 +84,8 @@
       <workItem from="1582625037088" duration="127000" />
       <workItem from="1596054809247" duration="1240000" />
       <workItem from="1596131691879" duration="95000" />
-      <workItem from="1597674657794" duration="10656000" />
+      <workItem from="1597674657794" duration="13117000" />
+      <workItem from="1597698632028" duration="7637000" />
     </task>
     <servers />
   </component>
@@ -107,6 +106,14 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="392" y="87" key="#ESLint" timestamp="1597698015776">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="392" y="87" key="#ESLint/0.0.1600.860@0.0.1600.860" timestamp="1597698015776" />
+    <state x="530" y="175" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597685374220">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="530" y="175" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860@0.0.1600.860" timestamp="1597685374220" />
     <state x="580" y="183" key="FileChooserDialogImpl" timestamp="1597674820003">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

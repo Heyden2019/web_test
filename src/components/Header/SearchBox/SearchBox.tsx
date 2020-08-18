@@ -1,7 +1,11 @@
-import React from 'react';
-import {Field, reduxForm} from "redux-form";
+import React, {FC} from 'react';
+import {Field, reduxForm, SubmitHandler} from "redux-form";
 
-const SearchBoxForm = ({handleSubmit}) => {
+type PropsType = {
+    handleSubmit: SubmitHandler
+}
+
+const SearchBoxForm: FC<PropsType> = ({handleSubmit}) => {
     return (
             <form onSubmit={handleSubmit}>
                 <Field name={"SearchMovie"} component={"input"} placeholder={"Search"}/>

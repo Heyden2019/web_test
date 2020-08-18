@@ -27,7 +27,7 @@ const Header: FC<PropsType> = ({getMovies}) => {
 
     return (<>
             <div className={styles.container}>
-                <div className={styles.logo}>Movie Catalog</div>
+                <div className={styles.logo}>Catalog</div>
                 <SearchBox onSubmit={getMoviesFromSearchBox} onChange={getMoviesFromSearchBox}/>
                 <Login/>
             </div>

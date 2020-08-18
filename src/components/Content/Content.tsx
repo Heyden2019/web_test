@@ -3,6 +3,7 @@ import styles from "./Content.module.css"
 import Preloader from "../Preloader/Preloader";
 import {paginator} from "../../utils/paginator";
 import {MovieType} from "../../types/types";
+import Paginator from "./Paginator";
 
 type PropsType = {
     totalResults: number
@@ -37,15 +38,7 @@ const Content: FC<PropsType> = ({totalResults, currentPage,
             }
 
             {isFetching && <Preloader/>}
-            <div className={styles.paginator}>
-                {Pages.map(page => (
-                    <span key={page}
-                          className={currentPage === page ? styles.pageActive : ""}
-                          onClick={() => changePage(searchBox, page)}>
-                            {page}
-                    </span>
-                ))}
-            </div>
+            <Paginator Pages={Pages} changePage={changePage} currentPage={currentPage} searchBox={searchBox}/>
             <div className={styles.searchItems}>
                 {movies.map(movie => (
                         <div className={styles.searchItem} key={movie.imdbID}>
@@ -58,6 +51,7 @@ const Content: FC<PropsType> = ({totalResults, currentPage,
                     )
                 )}
             </div>
+            <Paginator Pages={Pages} changePage={changePage} currentPage={currentPage} searchBox={searchBox}/>
         </>
     )
 }
